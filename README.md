@@ -17,3 +17,4 @@ On the backend, we've employed the robust capabilities of ASP.NET to ensure a re
 Keep tabs on every anime you've watched, note the episodes you've completed, and rate them for future reference. Whether you're a seasoned anime aficionado or just starting your journey, AnimeList Memorator is the perfect tool to enhance your anime-watching experience.
 
 Don't let the memorable moments slip away – trust AnimeList Memorator to be your faithful companion in the vast world of anime entertainment. Download now and take control of your anime list like never before!
+![image](https://github.com/TufanIonut/Anime-Front-End/assets/117408976/8c41cab3-78df-40bf-bb02-b8d0232f7f68)
