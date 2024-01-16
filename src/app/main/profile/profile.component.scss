@@ -1,0 +1,218 @@
+.corp {
+  font-family: 'kanit', sans-serif;
+  margin: -8px;
+  padding: 0;
+  background-color: #19182e;
+  background: #19182e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Stiluri pentru bara de navigare transparentă */
+nav {
+display: flex;
+justify-content: space-around;
+align-items: center;
+width: 100%;
+background-color: transparent;
+padding: 15px 0px;
+position: fixed;
+left: 0;
+top: 0;
+z-index: 100;
+background-color: #19182e;
+transition: background-color 0.3s ease; /* Adaugă tranziție pentru o animare mai lină */
+}
+
+/* Stiluri pentru bara de navigare cu culoare */
+.nav-colored {
+background-color: #19182e; /* Culoarea pe care o dorești */
+}
+
+
+.logo img{
+  height:35px;
+}
+
+nav .menu{
+  display: flex;
+
+}
+
+.search{
+  width: 250px;
+  height: 40px;
+  background-color: #11101D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 0px 40px;
+  color: white;
+  border: 1px solid white;
+}
+
+.search input{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: white;
+  height: 30px;
+  letter-spacing: 1px;
+}
+
+.search button{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: white;
+  height: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+body{
+  background:#eee;
+}
+
+.card{
+  border:none;
+
+  position:relative;
+  overflow:hidden;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.card:before{
+
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:4px;
+  height:100%;
+  background-color:#E1BEE7;
+  transform:scaleY(1);
+  transition:all 0.5s;
+  transform-origin: bottom
+}
+
+.card:after{
+
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:4px;
+  height:100%;
+  background-color:#8E24AA;
+  transform:scaleY(0);
+  transition:all 0.5s;
+  transform-origin: bottom
+}
+
+.card:hover::after{
+  transform:scaleY(1);
+}
+
+
+.fonts{
+  font-size:11px;
+}
+
+#main{
+  padding-top: 30vh;
+  background-color: #19182e;
+}
+
+
+.profile {
+  text-align: center;
+  color: white;
+  padding: 30px;
+}
+
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.profile h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.profile p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.profile .sign-out {
+  align-items: center; /* Add this line */
+  background-color: #19182e;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  border: yellow solid 1px;
+  padding: 10px 20px;
+  font-size: 1.0rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.profile .sign-out:hover {
+  background-color: yellow;
+  color: black;
+}
+
+.btn2 {
+  /* Stilurile existente pentru .btn2 */
+  background-color: #26274300;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  border: yellow solid 1px;
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+
+}
+
+/* Adaugarea marginelor intre butoane */
+.btn2:first-child {
+  margin-right: 20px; /* Schimbați aceasta valoare în funcție de spațiul dorit */
+}
+
+.btn2:last-child {
+  margin-left: 20px; /* Schimbați aceasta valoare în funcție de spațiul dorit */
+}
+
+
+.btn2:hover{
+  background-color: yellow;
+  color: black;
+}

@@ -1,0 +1,84 @@
+<div class="corp" style="height: 100vh">
+    <section id="main" style="margin-top: 70px; ">
+        <div class="header-container2">
+            <div class="headings">
+                <h1 class="showcase-heading2">Your</h1>
+                <h1 class="showcase-heading">Anime list</h1>
+            </div>
+        </div>
+
+        <div class="card-container">
+
+            <div class="card" *ngFor="let anime of animes_for_user">
+                <div class="circle">
+                    {{anime.score}}
+                </div>
+                <div class="card-image">
+                    <img src="{{anime.imageURL}}" alt="Anime 1">
+                </div>
+                <h3>{{anime.animeName}}</h3>
+                <p id="Genre">{{anime.genres}}</p>
+                <div class="card-content">
+                    <button class="btn" id="readMoreBtn" (click)="openPopup(anime.animeName)">Delete</button>
+                    <button class="btnPlus" id="openPopupBtn" (click)="openPopup2(anime.animeName)"><i
+                            class='fas fa-pen'></i></button>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+    <div class="popup" id="popup" *ngFor="let anime of animes_for_user">
+        <div class="popup-content">
+            <span class="close" id="closePopup" (click)="closePopup()">&times;</span>
+            <h1 id="animeTitle" style="text-align: center;">Are you sure you want to delete this anime?</h1>
+            <div class="buttons-container">
+                <button class="saveBtn" id="deleteAnimeBtn" (click)="deleteAnime()">Delete</button>
+                <button class="cancelBtn" id="cancelAnimeBtn" (click)="closePopup()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="animePopup" class="popup2">
+        <div class="popup-content2">
+            <span class="close" id="closePopupBtn" (click)="closePopup2()">&times;</span>
+            <h2 id="animeTitle">{{animeName}}</h2>
+
+            <div class="episode-info">
+                <p>Viewed episodes: <span id="episodeCount">0</span>/<span id="totalEpisodes">0</span></p>
+                <div class="progress-container">
+                    <progress id="progressBar" max="100" value="0"></progress>
+                    <button id="plusBtn"><i class="fas fa-plus"></i></button>
+                    <button id="minusBtn"><i class="fas fa-minus"></i></button>
+                </div>
+            </div>
+
+            <label for="startDate" id="startDateLabel">Start date:</label>
+            <input type="date" id="startDate" name="startDate" value="2023-12-31" min="2023-01-01" max="2323-12-31">
+
+            <label for="endDate" id="endDateLabel">Final date:</label>
+            <input type="date" id="endDate" name="endDate" value="2023-12-31" min="2023-01-01" max="2323-12-31">
+
+            <label for="rating" id="ratingLabel">Rating:</label>
+            <select id="rating" name="rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+
+
+            <div class="buttons-container">
+                <button class="saveBtn" id="saveBtnlist">Save</button>
+                <button class="cancelBtn" id="cancelBtnList" (click)="closePopup2()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300);
+
+
+body {
+    font-family: 'kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #19182e;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Stiluri pentru bara de navigare transparentă */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: transparent;
+    padding: 15px 0px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    background-color: #19182e;
+    transition: background-color 0.3s ease;
+    /* Adaugă tranziție pentru o animare mai lină */
+}
+
+/* Stiluri pentru bara de navigare cu culoare */
+.nav-colored {
+    background-color: #19182e;
+    /* Culoarea pe care o dorești */
+}
+
+
+.logo img {
+    height: 35px;
+}
+
+nav .menu {
+    display: flex;
+
+}
+
+.search {
+    width: 250px;
+    height: 40px;
+    background-color: #11101D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 0px 40px;
+    color: white;
+    border: 1px solid white;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: white;
+    height: 30px;
+    letter-spacing: 1px;
+}
+
+.search button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: white;
+    height: 30px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}

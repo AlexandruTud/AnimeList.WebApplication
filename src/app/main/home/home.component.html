@@ -1,0 +1,265 @@
+<div class="corp">
+
+    <section id="presentationn" style="height: 60vh;">
+
+    </section>
+
+
+
+    <section id="main">
+
+        <div class="header-container">
+            <div class="headings">
+                <h1 class="showcase-heading2">STREAMING</h1>
+                <h1 class="showcase-heading">Best Animes</h1>
+            </div>
+            <div class="card2">
+                <a (click)="goToYourList()"><button class="btn2"><i class='fas fa-bars'></i> Your list</button></a>
+                <a (click)="signOut()"><button class="btn2"><i class='fas fa-sign-out-alt'></i> Sign Out</button></a>
+            </div>
+        </div>
+
+        <div class="card3">
+            <button *ngFor="let genre of genres" class="btn3" (click)="searchByGenre(genre.genreName)">
+                <i class="{{ genre.icon }}"></i> {{ genre.genreName }}
+            </button>
+        </div>
+
+
+
+        <div class="card-container">
+
+
+
+            <div class="card" *ngFor="let anime of animes_available">
+                <div class="circle">
+                    {{anime.score}}
+                </div>
+                <div class="card-image">
+                    <img src="{{anime.imageURL}}" alt="Anime 1">
+                </div>
+                <h3>{{anime.animeName}}</h3>
+                <p id="Genre">{{anime.genres}}</p>
+                <div class="card-content">
+                    <button class="btn" id="readMoreBtn" (click)="openPopup(anime.animeName)">Read More</button>
+                    <button class="btnPlus" id="openPopupBtn" (click)="openPopup2(anime.animeName)"><i
+                            class='fas fa-plus'></i></button>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <section id="presentation">
+        <div class="header-container2">
+            <div class="headings">
+                <h1 class="showcase-heading2">THIS YEAR</h1>
+                <h1 class="showcase-heading">Coming Soon</h1>
+            </div>
+        </div>
+
+        <div class="card-container">
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="/assets/My Hero Academia.png" alt="Anime 1">
+                </div>
+                <h3>My Hero Academia</h3>
+                <p id="Genre">Shounen, Action, Adventure</p>
+                <div class="card-content">
+                    <button class="btn" id="readMoreBtn">Read More</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="/assets/cd.png" alt="Anime 2">
+                </div>
+                <h3>Code Geass</h3>
+                <p id="Genre">Mistery, Action, Adventure</p>
+                <div class="card-content">
+                    <button class="btn">Read More</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="/assets/Cowboy Bebop.png" alt="Anime 1">
+                </div>
+                <h3>Cowboy Bebop</h3>
+                <p id="Genre">Action, Adventure, Comedy</p>
+                <div class="card-content">
+                    <button class="btn">Read More</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="/assets/Death Note.png" alt="Anime 1">
+                </div>
+                <h3>Death Note</h3>
+                <p id="Genre">Mistery, Action, Adventure</p>
+                <div class="card-content">
+                    <button class="btn">Read More</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="/assets/j.png" alt="Anime 1">
+                </div>
+                <h3>Hunter x Hunter</h3>
+                <p id="Genre">Action, Adventure, Comedy</p>
+                <div class="card-content">
+                    <button class="btn">Read More</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="reviews">
+
+        <div class="header-container2" style="margin-bottom: 20px;">
+            <div class="headings">
+                <h1 class="showcase-heading2">FROM OUR USERS</h1>
+                <h1 class="showcase-heading">Best Reviews</h1>
+            </div>
+        </div>
+        <div class="card-container2">
+
+            <div class="cardReview">
+                <div class="card-image2">
+                    <img src="/assets/images.jpeg" alt="Review Image">
+
+                </div>
+                <div id="review">
+                    <h3 style="color: yellow;">Mihai Ion</h3>
+                    <p>This is the best anime site ever!</p>
+                </div>
+            </div>
+            <div class="cardReview">
+                <div class="card-image2">
+                    <img src="/assets/prime1.jpg.webp" alt="Review Image">
+
+                </div>
+                <div id="review">
+                    <h3 style="color: yellow;">Optimus Prime</h3>
+                    <p>I love this anime site too!</p>
+                </div>
+            </div>
+            <div class="cardReview">
+                <div class="card-image2">
+                    <img src="/assets/fort.jpeg" alt="Review Image">
+                </div>
+                <div id="review">
+                    <h3 style="color: yellow;">Default skin</h3>
+                    <p>This is the best anime site wow lets build together a dasdsadasdsadasdasdsa</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="footer">
+        <div class="heading">
+            <h2>Anime<sup>™</sup></h2>
+        </div>
+        <div class="content">
+            <div class="services">
+                <h4>Services</h4>
+                <p><a>Add animes to your list</a></p>
+                <p><a>Give notes to animes</a></p>
+                <p><a>Track your animes everywhere</a></p>
+                <p><a>Make your watch list easier</a></p>
+            </div>
+            <div class="social-media">
+                <h4>Social</h4>
+                <p>
+                    <a><i class="fab fa-twitter"></i> Twitter</a>
+                </p>
+                <p>
+                    <a><i class="fab fa-facebook"></i> Facebook</a>
+                </p>
+                <p>
+                    <a><i class="fab fa-instagram"></i> Instagram</a>
+                </p>
+            </div>
+            <div class="links">
+                <h4>Quick links</h4>
+                <p><a><i class="fas fa-angle-right"></i> Terms and Conditions</a></p>
+                <p><a><i class="fas fa-angle-right"></i> Anime List</a></p>
+                <p><a><i class="fas fa-angle-right"></i> Profile</a></p>
+                <p><a><i class="fas fa-angle-right"></i> Contact</a></p>
+            </div>
+            <div class="details">
+                <h4 class="address">Address</h4>
+                <p>
+                    Constanta , Romania <br />
+                    Bul Ferdinand 120 Bloc MTTC
+                </p>
+                <h4 class="mail">Email</h4>
+                <p><a>anime1234</a></p>
+            </div>
+        </div>
+        <footer>
+            <hr />
+            © 2023 Anime. All rights reserved.
+        </footer>
+
+    </div>
+    <div id="animePopup" class="popup2">
+        <div class="popup-content2">
+            <span class="close" id="closePopupBtn" (click)="closePopup2()">&times;</span>
+            <h2 id="animeTitle">{{plusAnime.animeName}}</h2>
+
+            <div class="episode-info">
+                <p>Viewed episodes: <span id="episodeCount">{{episodes}}</span>/<span
+                        id="totalEpisodes">{{plusAnime.numberOfEpisodes}}</span></p>
+                <div class="progress-container">
+                    <progress id="progressBar" max="100" [value]="progress"></progress>
+                    <button id="plusBtn" (click)="incrementEp()"><i class="fas fa-plus"></i></button>
+                    <button id="minusBtn" (click)="decrementEp()"><i class="fas fa-minus"></i></button>
+                </div>
+            </div>
+
+            <label for="startDate" id="startDateLabel">Start date:</label>
+            <input type="date" id="startDate" name="startDate" value="2023-01-01" min="2023-01-01" max="2323-12-31">
+
+            <label for="endDate" id="endDateLabel">Final date:</label>
+            <input type="date" id="endDate" name="endDate" value="2023-12-31" min="2023-01-01" max="2323-12-31">
+
+            <label for="rating" id="ratingLabel">Rating:</label>
+            <select id="rating" name="rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+
+            <div class="buttons-container">
+                <button class="saveBtn" id="saveBtn" (click)="adaugareAnime()">Add</button>
+                <button class="cancelBtn" id="cancelBtn" (click)="closePopup2()">Cancel</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" id="closePopup" (click)="closePopup()">&times;</span>
+            <h2 id="animeTitle">{{selectedAnime.animeName}}</h2>
+
+            <p id="animeDescription">{{selectedAnime.description}}</p>
+            <p id="animeEpisodes">Number of episoades: {{selectedAnime.numberOfEpisodes}}</p>
+            <p id="animeGenre">Genre: {{selectedAnime.genres}}</p>
+            <p id="animeStudio">Studio: {{selectedAnime.studioName}}</p>
+        </div>
+
+    </div>
+
+</div>
